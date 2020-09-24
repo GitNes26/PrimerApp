@@ -3,12 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:paddingHorizontal="25dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#14CA9F"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textFontWeight="900"
         android:text="Nestor Puentes Inchaurregui"
         android:layout_centerInParent="true"
         />
