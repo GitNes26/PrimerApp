@@ -3,20 +3,252 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:paddingHorizontal="25dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txt_1"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#14CA9F"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        android:textFontWeight="900"
-        android:text="Nestor Puentes Inchaurregui"
-        android:layout_centerInParent="true"
-        />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="6"
+        android:background="@color/colorDarkCalcu"
+        >
+
+        <TextView
+            style="@style/StyleAppCalcu"
+            android:id="@+id/Resultado"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="50dp" android:textFontWeight="900"
+            android:padding="1dp"
+            android:textAlignment="textEnd">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_C"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorFuncionTeclas"
+                android:text="C"></Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_MasMenos"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorFuncionTeclas"
+                android:text="+/-"></Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_Porcentaje"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorFuncionTeclas"
+                android:text="%"></Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_Divi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasOperaciones"
+                android:text="÷"></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="7">
+            </Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="8">
+            </Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="9">
+            </Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_Multi"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasOperaciones"
+                android:text="×">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="4"
+                ></Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="5"
+                ></Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="6"
+                ></Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_Resta"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasOperaciones"
+                android:text="-"
+                ></Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4"
+            android:padding="1dp">
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="1">
+            </Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="2">
+            </Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text="3">
+            </Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_Sumar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasOperaciones"
+                android:text="+">
+            </Button>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/colorTeclasNumeros"
+                android:text="0">
+            </Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_Punto"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasNumeros"
+                android:text=".">
+            </Button>
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_Igual"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorTeclasOperaciones"
+                android:text="=">
+            </Button>
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </RelativeLayout>

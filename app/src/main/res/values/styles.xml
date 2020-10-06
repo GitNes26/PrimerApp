@@ -7,4 +7,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="StyleAppCalcu">
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">fill_horizontal</item>
+        <item name="android:textColor">@color/colorNumeros</item>
+        <item name="android:textAlignment">center</item>
+
+    </style>
+
 </resources>
