@@ -7,6 +7,6 @@
     <color name="colorDarkCalcu">#404040</color>
     <color name="colorFuncionTeclas">#464646</color>
     <color name="colorTeclasNumeros">#656565</color>
-    <color name="colorTeclasOperaciones">#D6A001</color>
+    <color name="colorTeclasOperaciones">#CA570B</color>
     <color name="colorNumeros">#DFDEDE</color>
 </resources>

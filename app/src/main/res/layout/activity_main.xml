@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="6"
+        android:weightSum="13"
         android:background="@color/colorDarkCalcu"
         >
 
@@ -19,9 +19,8 @@
             android:id="@+id/Resultado"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="3"
             android:text="0"
-            android:textSize="50dp" android:textFontWeight="900"
             android:padding="1dp"
             android:textAlignment="textEnd">
         </TextView>
@@ -29,7 +28,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:weightSum="4">
 
             <Button
@@ -39,7 +38,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorFuncionTeclas"
-                android:text="C"></Button>
+                android:text="C"
+                android:onClick="miclick"></Button>
 
             <Button
                 style="@style/StyleAppCalcu"
@@ -48,7 +48,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorFuncionTeclas"
-                android:text="+/-"></Button>
+                android:text="+/-"
+                android:onClick="miclick"></Button>
 
             <Button
                 style="@style/StyleAppCalcu"
@@ -57,7 +58,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorFuncionTeclas"
-                android:text="%"></Button>
+                android:text="%"
+                android:onClick="miclick"></Button>
 
             <Button
                 style="@style/StyleAppCalcu"
@@ -66,13 +68,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasOperaciones"
-                android:text="÷"></Button>
+                android:text="÷"
+                android:onClick="miclick"></Button>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:weightSum="4">
 
             <Button
@@ -82,7 +85,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
-                android:text="7">
+                android:text="7"
+                android:onClick="miclick">
             </Button>
 
             <Button
@@ -92,7 +96,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
-                android:text="8">
+                android:text="8"
+                android:onClick="miclick">
             </Button>
 
             <Button
@@ -102,7 +107,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
-                android:text="9">
+                android:text="9"
+                android:onClick="miclick">
             </Button>
 
             <Button
@@ -112,14 +118,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasOperaciones"
-                android:text="×">
+                android:text="×"
+                android:onClick="miclick">
             </Button>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:weightSum="4">
 
             <Button
@@ -130,6 +137,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
                 android:text="4"
+                android:onClick="miclick"
                 ></Button>
 
             <Button
@@ -140,6 +148,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
                 android:text="5"
+                android:onClick="miclick"
                 ></Button>
 
             <Button
@@ -150,6 +159,7 @@
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
                 android:text="6"
+                android:onClick="miclick"
                 ></Button>
 
             <Button
@@ -160,13 +170,14 @@
                 android:layout_weight="1"
                 android:background="@color/colorTeclasOperaciones"
                 android:text="-"
+                android:onClick="miclick"
                 ></Button>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:weightSum="4"
             android:padding="1dp">
 
@@ -177,7 +188,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
-                android:text="1">
+                android:text="1"
+                android:onClick="miclick">
             </Button>
 
             <Button
@@ -187,7 +199,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
-                android:text="2">
+                android:text="2"
+                android:onClick="miclick">
             </Button>
 
             <Button
@@ -197,7 +210,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
-                android:text="3">
+                android:text="3"
+                android:onClick="miclick">
             </Button>
 
             <Button
@@ -207,14 +221,15 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasOperaciones"
-                android:text="+">
+                android:text="+"
+                android:onClick="miclick">
             </Button>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:weightSum="4">
 
             <Button
@@ -224,7 +239,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:background="@color/colorTeclasNumeros"
-                android:text="0">
+                android:text="0"
+                android:onClick="miclick">
             </Button>
 
             <Button
@@ -234,7 +250,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasNumeros"
-                android:text=".">
+                android:text="."
+                android:onClick="miclick">
             </Button>
 
             <Button
@@ -244,7 +261,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorTeclasOperaciones"
-                android:text="=">
+                android:text="="
+                android:onClick="miclick">
             </Button>
         </LinearLayout>
 
