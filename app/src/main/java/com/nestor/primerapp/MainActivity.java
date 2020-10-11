@@ -121,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
                 display.setText(montoAcumulado + "0.");
             }
             else if (montoAcumulado.contains(".")){
+
                 display.setText(montoAcumulado);
             }
             else { display.setText(montoAcumulado + ".");}
