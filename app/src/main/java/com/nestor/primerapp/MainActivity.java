@@ -121,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
                 display.setText(montoAcumulado + "0.");
             }
             else if (montoAcumulado.contains(".")){
-
                 display.setText(montoAcumulado);
             }
             else { display.setText(montoAcumulado + ".");}
@@ -136,9 +135,10 @@ public class MainActivity extends AppCompatActivity {
     public void Sumar(View view){
         String montoAcumulado = display.getText().toString();
         String Historial = historial.getText().toString();
-        if (Historial.isEmpty()) {
-            historial.setText(montoAcumulado + "+");
-        }else {historial.setText(Historial + "+"); }
+        historial.setText(Historial + montoAcumulado + "+");
+//        if (Historial.isEmpty()) {
+//            historial.setText(montoAcumulado + "+");
+//        }else {historial.setText(Historial + "+"); }
         operador = "+";
         n1 = Double.parseDouble(montoAcumulado);
         display.setText("");
@@ -146,16 +146,18 @@ public class MainActivity extends AppCompatActivity {
     public void Restar(View view){
         String montoAcumulado = display.getText().toString();
         String Historial = historial.getText().toString();
-        if (Historial.isEmpty()) {
-            historial.setText(montoAcumulado + "-");
-        }else {historial.setText(Historial + "-"); }
+        historial.setText(Historial + montoAcumulado + "-");
+//        if (Historial.isEmpty()) {
+//            historial.setText(montoAcumulado + "-");
+//        }else {historial.setText(Historial + "-"); }
         operador = "-";
         n1 = Double.parseDouble(montoAcumulado);
         display.setText("");
     }
     public void Multiplicar(View view){
         String montoAcumulado = display.getText().toString();
-
+        String Historial = historial.getText().toString();
+        historial.setText(Historial + montoAcumulado + "×");
         operador = "×";
         n1 = Double.parseDouble(montoAcumulado);
         display.setText("");
@@ -170,7 +172,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void Dividir(View view){
         String montoAcumulado = display.getText().toString();
-
+        String Historial = historial.getText().toString();
+        historial.setText(Historial + montoAcumulado + "÷");
         operador = "÷";
         n1 = Double.parseDouble(montoAcumulado);
         display.setText("");
@@ -186,7 +189,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void Porcentaje(View view){
         String montoAcumulado = display.getText().toString();
-
+        String Historial = historial.getText().toString();
+        historial.setText(Historial + montoAcumulado + "%");
         operador = "%";
         n1 = Double.parseDouble(montoAcumulado);
         display.setText("");
@@ -202,8 +206,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void Invertir(View view){
         String montoAcumulado = display.getText().toString();
-
-        n1 = Double.parseDouble(montoAcumulado) * -1;
+        if (!(montoAcumulado.isEmpty() || montoAcumulado.equals("0"))) {
+            n1 = Double.parseDouble(montoAcumulado) * -1;
+        }
         display.setText(String.valueOf(n1));
 //        try {
 //            historial.setText(historial.getText().toString() + display.getText().toString() + "-");
@@ -217,6 +222,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void Total(View view){
         String montoAcumulado = display.getText().toString();
+        String Historial = historial.getText().toString();
+        historial.setText(Historial + montoAcumulado + "=");
         try {
             switch (operador){
                 case "+":
@@ -244,8 +251,12 @@ public class MainActivity extends AppCompatActivity {
                     resultado = (n1 * n2) / 100;
                     display.setText(String.valueOf(resultado));
                     break;
+                default:
+                    resultado = 0;
+                    display.setText(String.valueOf(resultado));
+                    break;
             }
-            Toast.makeText(this, "n1="+n1+"--n2="+n2+"--Total="+resultado, Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this, "n1="+n1+"--n2="+n2+"--Total="+resultado, Toast.LENGTH_SHORT).show();
 
         } catch (EmptyStackException e) {
             Toast.makeText(this, "Ingresa un valor o pulsa el igual", Toast.LENGTH_SHORT).show();
