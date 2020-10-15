@@ -20,4 +20,5 @@
     <string name="porciento">%</string>
     <string name="masMenos">+/-</string>
     <string name="c">C</string>
+    <string name="ac">AC</string>
 </resources>

@@ -3,6 +3,7 @@ package com.nestor.primerapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,10 +12,10 @@ import android.widget.Toast;
 import java.util.EmptyStackException;
 import java.util.Set;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements  View.OnClickListener {
     TextView display, historial;
     Button btn0, btn1, btn2, btn3, btn4,btn5, btn6, btn7, btn8, btn9,
-            btnP, btnI, btnS,btnR, btnM, btnD, btnPo, btnMM, btnC;
+            btnP, btnI, btnS,btnR, btnM, btnD, btnPo, btnMM, btnC,btnAC;
     String operador;
     double n1,n2,resultado;
 
@@ -44,6 +45,15 @@ public class MainActivity extends AppCompatActivity {
         btnPo = (Button) findViewById(R.id.Btn_Porcentaje);
         btnMM = (Button) findViewById(R.id.Btn_MasMenos);
         btnC = (Button) findViewById(R.id.Btn_C);
+
+        // llamar por listener
+        btnAC = findViewById(R.id.Btn_AC);
+        // llamando por listener --> minimo necesita el constructor,
+        // si se tiene identificador (variable) puede ser utilizado por varios
+        // si se declara solo el constructor, solo lo puede utilizar donde se declaro
+        btnAC.setOnClickListener(this);
+        // si se desea implementar el MainActivity como un OnClickListener, se le agrega una interfaz
+        // implements Vie.OnlcickListener y aqui depositamos las reglas que debe cumplir el MainActivity
 
 
 
@@ -140,7 +150,10 @@ public class MainActivity extends AppCompatActivity {
 //            historial.setText(montoAcumulado + "+");
 //        }else {historial.setText(Historial + "+"); }
         operador = "+";
+
         n1 = Double.parseDouble(montoAcumulado);
+        Log.e("na1",String.valueOf(n1));
+        Log.e("na2",montoAcumulado);
         display.setText("");
     }
     public void Restar(View view){
@@ -152,6 +165,8 @@ public class MainActivity extends AppCompatActivity {
 //        }else {historial.setText(Historial + "-"); }
         operador = "-";
         n1 = Double.parseDouble(montoAcumulado);
+        Log.e("na-1",String.valueOf(n1));
+        Log.e("na-2",montoAcumulado);
         display.setText("");
     }
     public void Multiplicar(View view){
@@ -261,5 +276,11 @@ public class MainActivity extends AppCompatActivity {
         } catch (EmptyStackException e) {
             Toast.makeText(this, "Ingresa un valor o pulsa el igual", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void onClick(View v) {
+        String montoAcumulado = display.getText().toString();
+        display.setText("");
     }
 }
