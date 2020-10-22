@@ -9,4 +9,6 @@
     <color name="colorTeclasNumeros">#656565</color>
     <color name="colorTeclasOperaciones">#CA570B</color>
     <color name="colorNumeros">#DFDEDE</color>
+    <color name="colorEnviar">#39A4FA</color>
+    <color name="colorBorrar">#353535</color>
 </resources>

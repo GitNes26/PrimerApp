@@ -10,9 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="15"
-        android:background="@color/colorDarkCalcu"
-        >
+        android:weightSum="17"
+        android:background="@color/colorDarkCalcu">
+
         <TextView
             style="@style/StyleAppCalcu"
             android:id="@+id/Historial"
@@ -42,17 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="2"
-            android:weightSum="5">
-
-            <Button
-                style="@style/StyleAppCalcu"
-                android:id="@+id/Btn_AC"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorFuncionTeclas"
-                android:text="@string/ac"
-                android:onClick="miclick"></Button>
+            android:weightSum="4">
 
             <Button
                 style="@style/StyleAppCalcu"
@@ -289,6 +279,41 @@
             </Button>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:weightSum="4">
+
+            <Button
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_AC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorFuncionTeclas"
+                android:text="@string/ac"
+                android:onClick="miclick"></Button>
+            <ImageButton
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_Enviar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/colorEnviar"
+                android:src="@drawable/send"
+                android:scaleType="fitCenter"></ImageButton>
+            <ImageButton
+                style="@style/StyleAppCalcu"
+                android:id="@+id/Btn_BorrarUno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorBorrar"
+                android:src="@drawable/backspace"
+                android:scaleType="fitCenter"></ImageButton>
+
+        </LinearLayout>
 
     </LinearLayout>
 

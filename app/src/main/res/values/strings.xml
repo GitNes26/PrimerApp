@@ -21,4 +21,9 @@
     <string name="masMenos">+/-</string>
     <string name="c">C</string>
     <string name="ac">AC</string>
+
+    <string name="Titulo">MiCalcu</string>
+    <string name="Icono">Icono de calculadora</string>
+    <string name="Autor">Néstor Josué Puentes Inchaurregui</string>
+    <string name="Salon">4B - TIDSM</string>
 </resources>
