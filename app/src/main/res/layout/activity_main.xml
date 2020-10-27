@@ -292,8 +292,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/colorBorrar"
-                android:text="@string/ac"
-                android:onClick="miclick"></Button>
+                android:text="@string/ac"></Button>
             <ImageButton
                 style="@style/StyleAppCalcu"
                 android:id="@+id/Btn_Enviar"
