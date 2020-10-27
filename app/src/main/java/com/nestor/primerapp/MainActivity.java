@@ -2,6 +2,7 @@ package com.nestor.primerapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,13 +13,14 @@ import android.widget.Toast;
 import java.util.EmptyStackException;
 import java.util.Set;
 
-public class MainActivity extends AppCompatActivity implements  View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView display, historial;
     Button btn0, btn1, btn2, btn3, btn4,btn5, btn6, btn7, btn8, btn9,
-            btnP, btnI, btnS,btnR, btnM, btnD, btnPo, btnMM, btnC,btnAC;
+            btnP, btnI, btnS,btnR, btnM, btnD, btnPo, btnMM, btnC,btnAC,btnB;
     String operador;
     double n1,n2,resultado;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +50,12 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
 
         // llamar por listener
         btnAC = findViewById(R.id.Btn_AC);
+        btnB = findViewById(R.id.Btn_BorrarUno);
         // llamando por listener --> minimo necesita el constructor,
         // si se tiene identificador (variable) puede ser utilizado por varios
         // si se declara solo el constructor, solo lo puede utilizar donde se declaro
         btnAC.setOnClickListener(this);
+        btnB.setOnClickListener(this);
         // si se desea implementar el MainActivity como un OnClickListener, se le agrega una interfaz
         // implements Vie.OnlcickListener y aqui depositamos las reglas que debe cumplir el MainActivity
 
@@ -141,6 +145,39 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
         }
 
     }
+
+//    public void Operaciones(View view) {
+//        String montoAcumulado = display.getText().toString();
+//        String Historial = historial.getText().toString();
+//
+//        if (btnS.equals(view)) {
+//            historial.setText(Historial + montoAcumulado + "+");
+//
+//            if (Historial.isEmpty()) {
+//                historial.setText(montoAcumulado + "+");
+//            } else {
+//                historial.setText(Historial + montoAcumulado +"+");
+//            }
+//            operador = "+";
+//
+//            n1 += Double.parseDouble(montoAcumulado);
+//            Log.e("na1", String.valueOf(n1));
+//            Log.e("na2", montoAcumulado);
+//            display.setText("");
+//        }
+//        else if (btnR.equals(view)){
+//            historial.setText(Historial + montoAcumulado + "-");
+//
+//            if (Historial.isEmpty()) {
+//            historial.setText(montoAcumulado + "-");
+//            }else {historial.setText(Historial + montoAcumulado + "-"); }
+//            operador = "-";
+//            n1 -= Double.parseDouble(montoAcumulado);
+//            Log.e("na-1",String.valueOf(n1));
+//            Log.e("na-2",montoAcumulado);
+//            display.setText("");
+//        }
+//    }
 
     public void Sumar(View view){
         String montoAcumulado = display.getText().toString();
@@ -281,6 +318,14 @@ public class MainActivity extends AppCompatActivity implements  View.OnClickList
     @Override
     public void onClick(View v) {
         String montoAcumulado = display.getText().toString();
-        display.setText("");
+
+        if (btnAC.equals(v)) {
+            display.setText("");
+        }/*else if(btnB.equals(v)){
+            if (display.length() > 0) {
+                montoAcumulado.delete(montoAcumulado.length() - 1, montoAcumulado.length());
+            }display.setText(montoAcumulado);
+        }*/
+
     }
 }
