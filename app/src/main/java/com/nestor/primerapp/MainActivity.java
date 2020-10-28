@@ -290,7 +290,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (btnAC.equals(v)) {
             display.setText("");
         }else if (btnB.equals(v)){
-            
+            if (montoAcumulado.equals("")) {
+                display.setText("0");
+            }else {
+                String BorrarUno = montoAcumulado.substring(0, montoAcumulado.length() - 1);
+                display.setText(BorrarUno);
+            }
         }
     }
 }
